@@ -1,7 +1,10 @@
 FROM ushahidi/php-fpm-nginx:php-7.3
 LABEL org.opencontainers.image.source="https://github.com/ushahidi/platform"
 
+
 COPY docker-php-ext-enable /usr/local/bin/
+
+
 RUN apt-get update 
 RUN apt-get install -y php-pear php7.3-dev
 RUN pecl channel-update pecl.php.net
